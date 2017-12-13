@@ -1,0 +1,46 @@
+-- CREATE TABLE 学生表(
+-- 学号 VARCHAR2(4),
+-- 姓名 VARCHAR2(10),
+-- 性别 VARCHAR2(2),
+-- 生日 DATE,
+-- 奖学金 NUMBER(7,2),
+-- 学生班级号 NUMBER(2) DEFAULT '1')
+
+-- CREATE TABLE 课程表(
+-- 时间 DATE,
+-- 星期一 VARCHAR2(10),
+-- 星期二 VARCHAR2(10),
+-- 星期三 VARCHAR2(10),
+-- 星期四 VARCHAR2(10),
+-- 星期五 VARCHAR2(10)
+-- )
+-- INSERT INTO 学生表 (姓名,性别,生日,奖学金) 
+-- VALUES ('张三','女',TO_DATE('2000-01-01'),1000)
+-- 
+-- INSERT INTO 学生表 (学号,姓名,性别,生日,奖学金) 
+-- VALUES (6666,'撒旦','男',SYSDATE,5000)
+-- -- 
+-- DELETE FROM 学生表
+-- WHERE 学号='6666'
+-- INSERT into 课程表(时间,星期一,星期二,星期三,星期四,星期五)
+-- VALUES ('','数学','语文','历史','地理','英语')
+
+-- CREATE TABLE dapt10
+-- AS
+-- SELECT empno,ENAME,sal+1000 salii
+-- FROM EMP
+-- WHERE DEPTNO=10
+
+ALTER TABLE 学生表
+MODIFY (学号 VARCHAR2(20))
+
+ALTER TABLE EMP
+add(sex VARCHAR2(10) DEFAULT '女')
+
+ALTER TABLE EMP DROP COLUMN sex
+
+DELETE FROM EMP
+WHERE empno=7999
+
+UPDATE EMP SET sex='男'
+UPDATE 学生表 SET 学号='6996' WHERE 姓名='李四'
